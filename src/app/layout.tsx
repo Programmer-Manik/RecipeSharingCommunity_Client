@@ -1,41 +1,45 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import { Providers } from "@/lib/Providers";
+import "@/src/styles/globals.css";
+import { Metadata, Viewport } from "next";
+import clsx from "clsx";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { siteConfig } from "@/src/config/site";
+import { fontSans } from "@/src/config/fonts";
+import { Navbar } from "@/src/components/UI/navbar";
+import { Providers } from "../lib/Providers";
 
 export const metadata: Metadata = {
-  title: "Culinary Circle - Share, Discover, and Explore New Recipes",
-  description: "Join Culinary Circle, a vibrant community for home cooks and culinary enthusiasts. Share your favorite recipes, discover new dishes, and engage with a passionate cooking community. Access exclusive content, submit recipes, and enjoy interactive features like ingredient checklists, cooking timers, and social engagement through comments, ratings, and more.",
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
+      <head />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={clsx(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
       >
-        <Providers
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-
+        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           {children}
         </Providers>
       </body>

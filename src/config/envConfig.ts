@@ -1,5 +1,3 @@
-const envConfig = {
-    baseApi: process.env.NEXT_PUBLIC_BASE_API,
-};
+export const envConfig = {};
 
 export default envConfig;

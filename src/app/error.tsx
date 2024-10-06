@@ -1,20 +1,31 @@
-'use client' // Error boundaries must be Client Components
+'use client';
 
-export default function error({
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    error,
-    reset,
+import { useEffect } from 'react';
+
+export default function Error({
+  error,
+  reset,
 }: {
-    error: Error & { digest?: string }
-    reset: () => void
+  error: Error;
+  reset: () => void;
 }) {
-    return (
-        // global-error must include html and body tags
-        <html>
-            <body>
-                <h2>Something went wrong!</h2>
-                <button onClick={() => reset()}>Try again</button>
-            </body>
-        </html>
-    )
+  useEffect(() => {
+    // Log the error to an error reporting service
+    /* eslint-disable no-console */
+    console.error(error);
+  }, [error]);
+
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button
+        onClick={
+          // Attempt to recover by trying to re-render the segment
+          () => reset()
+        }
+      >
+        Try again
+      </button>
+    </div>
+  );
 }
