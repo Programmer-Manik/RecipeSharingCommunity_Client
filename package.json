@@ -1,9 +1,9 @@
 {
-  "name": "RecipeSharingCommunity_Server",
+  "name": "next-app-template",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "RecipeSharingCommunity_Server",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
