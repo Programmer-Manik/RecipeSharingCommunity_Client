@@ -12,7 +12,7 @@ import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
-
+import Image from "next/image";
 import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/theme-switch";
 import { Logo } from "@/src/assets/icons";
@@ -37,8 +37,15 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-xl text-inherit">CoockUp</p>
+            {/* <Logo />
+            <p className="font-bold text-xl text-inherit">CoockUp</p> */}
+            <Image
+              src="https://png.pngtree.com/png-clipart/20220903/ourmid/pngtree-chef-hat-and-cooking-logo-png-image_6136205.png"
+              alt="Picture of the author"
+              width={40}
+              height={40}
+            />
+             <p className="font-bold text-xl text-inherit">Recipe</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
