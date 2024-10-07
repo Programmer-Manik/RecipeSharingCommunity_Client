@@ -50,7 +50,6 @@ const RecipeCard = ({ recipe }: { recipe: any }) => {
     (item: any) => item?.type == "rating" && item?.userEmail == loggedUserEmail
   );
 
-
   //* upvote downvote and rating show END
 
   const handleUpvote = async (id: string) => {
@@ -228,18 +227,18 @@ const RecipeCard = ({ recipe }: { recipe: any }) => {
       {/* Recipe Details */}
       <div className="px-4 pt-2">
         <div className="flex justify-start gap-2 pb-2">
-        <Link href={`/profile/${recipe?.publishUserId}`}>
-          <Avatar
-            src={recipe?.publishUserImage}
-            className="w-12 h-12 rounded-full border-2 border-teal-400 shadow-lg"
-          />
-        </Link>
-        <Link
-          href={`/profile/${recipe?.publishUserId}`}
-          className="text-sm font-bold text-teal-400 pt-2 hover:text-blue-400 transition-all duration-300"
-        >
-          {recipe?.publishUserName}
-        </Link>
+          <Link href={`/profile/${recipe?.publishUserId}`}>
+            <Avatar
+              src={recipe?.publishUserImage}
+              className="w-12 h-12 rounded-full border-2 border-teal-400 shadow-lg"
+            />
+          </Link>
+          <Link
+            href={`/profile/${recipe?.publishUserId}`}
+            className="text-sm font-bold text-teal-400 pt-2 hover:text-blue-400 transition-all duration-300"
+          >
+            {recipe?.publishUserName}
+          </Link>
         </div>
         <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500 tracking-wide">
           {recipe?.title}

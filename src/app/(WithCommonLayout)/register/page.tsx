@@ -36,7 +36,7 @@ const Register = () => {
 
       <div className="bg-default-100 shadow-lg rounded-lg w-full max-w-md p-8 mx-4">
         <h3 className="text-3xl font-bold text-center text-default-700">
-          Register to CookUp
+          Register to Recipe
         </h3>
         <p className="text-center text-default-800 mb-6">
           Create your account to get started.

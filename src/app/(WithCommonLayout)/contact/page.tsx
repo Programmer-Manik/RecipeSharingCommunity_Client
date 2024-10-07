@@ -7,7 +7,7 @@ const ContactUs = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-500 mb-4">
-            Contact Us
+            Contact Use
           </h1>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
             Have any questions or feedback? We'd love to hear from you. Reach
@@ -84,10 +84,19 @@ const ContactUs = () => {
             Or Reach Us At
           </h2>
           <p className="text-lg text-gray-300">
-            Email: <a href="mailto:contact@recipecommunity.com" className="text-teal-400 hover:underline">contact@recipecommunity.com</a>
+            Email:{" "}
+            <a
+              href="mailto:mdmanik1502083874@gmail.com"
+              className="text-teal-400 hover:underline"
+            >
+              mdmanik1502083874@gmail.com
+            </a>
           </p>
           <p className="text-lg text-gray-300">
-            Phone: <a href="tel:+123456789" className="text-teal-400 hover:underline">+1 234 567 89</a>
+            Phone:{" "}
+            <a href="tel:+123456789" className="text-teal-400 hover:underline">
+              +88 01884743092
+            </a>
           </p>
         </div>
       </div>

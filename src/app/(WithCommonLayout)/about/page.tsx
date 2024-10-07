@@ -1,3 +1,4 @@
+import Team from "@/src/components/UI/Team";
 import React from "react";
 
 const AboutUs = () => {
@@ -43,13 +44,17 @@ const AboutUs = () => {
 
         {/* Why Us Section */}
         <div className="backdrop-blur-md bg-opacity-10 bg-white p-10 rounded-3xl shadow-xl mb-16">
-          <h2 className="text-3xl font-bold text-teal-400 mb-6">Why Choose Us?</h2>
+          <h2 className="text-3xl font-bold text-teal-400 mb-6">
+            Why Choose Us?
+          </h2>
           <ul className="list-disc list-inside text-lg text-gray-300 leading-relaxed space-y-4">
             <li>
               A futuristic, interactive platform for recipe discovery and
               sharing.
             </li>
-            <li>Advanced tools like ingredient checklists and built-in timers.</li>
+            <li>
+              Advanced tools like ingredient checklists and built-in timers.
+            </li>
             <li>AI-based personalized recipe recommendations.</li>
             <li>
               Social features to follow your favorite chefs and cooking
@@ -61,13 +66,10 @@ const AboutUs = () => {
 
         {/* Team Section */}
         <div className="backdrop-blur-md bg-opacity-10 bg-white p-10 rounded-3xl shadow-xl mb-16">
-          <h2 className="text-3xl font-bold text-teal-400 mb-6">Meet the Team</h2>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            We are a team of foodies, tech enthusiasts, and innovators driven to
-            blend culinary arts with futuristic technology. Our mission is to
-            inspire creativity in the kitchen while offering users an intuitive,
-            interactive experience.
-          </p>
+          <h2 className="text-3xl font-bold text-teal-400 mb-6">
+            Meet the Team
+          </h2>
+          <Team/>
         </div>
 
         {/* Call to Action */}

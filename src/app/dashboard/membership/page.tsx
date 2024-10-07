@@ -33,17 +33,17 @@ const Membership = () => {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-r from-gray-900 via-black to-gray-900 p-8">
-      <h1 className="text-4xl font-bold text-teal-400 mb-10">
-        Memberships
-      </h1>
+      <h1 className="text-4xl font-bold text-teal-400 mb-10">Memberships</h1>
 
       {/* User's membership and payment information */}
       <div className="mb-8 text-center text-white">
         <h1 className="text-xl">
-          Your total payment: <span className="text-teal-400">{user?.payment ?? "0"} Tk</span>
+          Your total payment:{" "}
+          <span className="text-teal-400">{user?.payment ?? "0"} Tk</span>
         </h1>
         <h1 className="text-xl">
-          Your membership valid until: <span className="text-teal-400">{formattedPremiumLastDate}</span>
+          Your membership valid until:{" "}
+          <span className="text-teal-400">{formattedPremiumLastDate}</span>
         </h1>
       </div>
 
