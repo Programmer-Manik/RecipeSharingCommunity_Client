@@ -35,7 +35,7 @@ const NavberDropdown = () => {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Avatar className="cursor-pointer" name="ana" />
+        <Avatar className="cursor-pointer" name="User" />
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         <DropdownItem

@@ -37,8 +37,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            {/* <Logo />
-            <p className="font-bold text-xl text-inherit">CoockUp</p> */}
+             {/* <Logo /> */}
             <Image
               src="https://png.pngtree.com/png-clipart/20220903/ourmid/pngtree-chef-hat-and-cooking-logo-png-image_6136205.png"
               alt="Picture of the author"
